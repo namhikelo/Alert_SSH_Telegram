@@ -1,6 +1,9 @@
 # Alert_SSH_Telegram
 
 ## RUN
+
+``` apt-get install jq ```
+
 Copy file telegram.sh into /etc/profile.d/ 
 
 ``` mv telegram.sh /etc/profile.d/ ```
