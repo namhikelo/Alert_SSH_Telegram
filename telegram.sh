@@ -17,7 +17,7 @@ if [ -n "$SSH_CLIENT" ]; then
         LOCATION="🌍 Location: $LOCATION"
     fi
 
-    TEXT=$(echo -e "🆘 New SSH login 🆘\n🖥 Server: $HOSTNAME\n🥷 User: $USER\n⌚ Time: $TIME\n🌐 IP: $IP\n🔒 Port (SSH): $PORT\n$LOCATION")
+    TEXT=$(echo -e "🆘 New SSH login 🆘\n🖥 Server: $HOSTNAME\n🥷 User: $USER\n⌚ Time: $TIME\n🌐 IP: $IP\n🔒 Port: $PORT\n$LOCATION")
 
-    curl -s -X POST --max-time $TIMEOUT $URL -d "chat_id=$CHAT_ID" -d text="$TEXT" > /dev/null
+    curl -s -X POST --max-time $TIMEOUT $URL -d "chat_id=$CHAT_ID" -d "text=$TEXT" > /dev/null
 fi
